@@ -7,11 +7,14 @@ $(document).ready(function() {
         $(this).text(type === "password" ? "Mostrar Contraseña" : "Ocultar Contraseña");
     });
 
-    // Permitir solo números en el campo de teléfono
-    $("#exampleFormControlInput3").on("input", function() {
-        var value = $(this).val();
-        $(this).val(value.replace(/[^0-9]/g, ''));
-    });
+ // Permitir solo números en el campo de teléfono y mostrar mensaje si se ingresan letras
+ $("#exampleFormControlInput3").on("input", function() {
+    var value = $(this).val();
+    if (/[^0-9]/.test(value)) {
+        alert("Escribe números");
+    }
+    $(this).val(value.replace(/[^0-9]/g, ''));
+});
 
     // Validación de formularios
     window.addEventListener('load', function() {
@@ -45,3 +48,47 @@ $(document).ready(function() {
 function showWelcomeMessage() {
     alert('¡Gracias por registrarte! Pronto recibirás noticias nuestras.');
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll('.card');
+
+    // estilo inicial
+    cards.forEach(card => {
+        card.style.transition = 'transform 0.3s, box-shadow 0.3s';
+        card.style.transform = 'translateY(20px)';
+        card.style.opacity = '0';
+    });
+
+    // Clase visible
+    cards.forEach((card, index) => {
+        setTimeout(() => {
+            card.style.transform = 'translateY(0)';
+            card.style.opacity = '1';
+        }, index * 200); // delay card animacion
+    });
+
+    //Acerca
+    cards.forEach(card => {
+        card.addEventListener('mouseover', () => {
+            card.style.transform = 'translateY(-20px)';
+            card.style.boxShadow = '0 20px 30px rgba(0, 0, 0, 0.2)';
+        });
+        //Aleja
+        card.addEventListener('mouseout', () => {
+            card.style.transform = 'translateY(0)';
+            card.style.boxShadow = 'none';
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach((link, index) => {
+        link.style.transition = 'opacity 0.5s';
+        link.style.opacity = '0';
+
+        setTimeout(() => {
+            link.style.opacity = '1';
+        }, index * 200); // Delay link animacion
+    });
+});
