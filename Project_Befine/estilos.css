@@ -1,0 +1,59 @@
+
+/* Establece el fondo azul oscuro */
+body {
+    background-color: #0b1c3d;
+}
+
+/* Cambia el color del texto a blanco */
+h1,h2, h5, p, .navbar-brand, .nav-link, .btn {
+    color: #ffffff;
+}
+
+/* Cambia el color del texto de card */
+.card-title,.card-text{
+    color: #ffffff;
+}
+
+/* Estilos para el botón de suscripción */
+.btn-custom {
+    background-color: #ffffff; /* blanco*/
+    border-color: #0423a0; /* azul */
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #005b96; /* Azul */
+}
+
+
+/* Estilos para los enlaces del carrusel */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #00a8cc; /* Celeste */
+}
+.carousel-item img {
+    width: 350px; /* Ancho deseado */
+    height: 350px; /* Alto deseado */
+}
+
+/* Estilos para los botones de compra */
+.btn-primary {
+    background-color: #00a8cc; /* Celeste */
+    border-color: #00a8cc; /* Celeste */
+}
+
+.card {
+    width: 350px; /* Ancho deseado */
+    height: 350px; /* Alto deseado */
+}
+
+
+h1,h2 {
+    text-align: center; /* Centra el título */
+}
+
+p {
+    text-align: center; /* Centra los párrafos */
+}
+li {
+    color:#ffffff;
+}

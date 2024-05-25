@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agua Befine - Recarga de Agua</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="./recarga.html">RECARGA DE AGUA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="indexBefine.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1 class="center-text">Agua Befine</h1>
+    <h1>
+        <button type="button" class="btn-custom" data-toggle="modal" data-target="#exampleModal">
+            Registrate!
+        </button>
+    </h1>
+    
+    <div class="d-flex flex-wrap justify-content-around">
+        <div class="card">
+            <img src="./img/valor_recarga.jpg" class="card-img-top" alt="Recarga de Agua">
+            <div class="card-body">
+                <center>
+                    <h5 class="card-title">Recarga de Agua</h5>
+                    <p class="card-text">Recarga para botellones de 20 litros</p>
+                    <p class="card-text">Precio $2.500</p>
+                    <p class="card-text">Envíos a todo Santiago</p>
+                    <a href="./comprar.html" class="btn btn-primary">Comprar</a>
+                </center>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Suscríbete a nuestro newsletter</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="subscriptionForm" novalidate>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="ejemplo@gmail.com" required>
+                            <div class="invalid-feedback">
+                                Por favor, ingresa un correo electrónico válido.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInputPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleFormControlInputPassword" placeholder="Contraseña" required>
+                            <div class="invalid-feedback">
+                                Por favor, ingresa una contraseña.
+                            </div>
+                        </div>
+                        <button type="button" id="togglePassword" class="btn btn-secondary">Mostrar/Ocultar Contraseña</button>
+                        
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput2" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Nombre completo" required>
+                            <div class="invalid-feedback">
+                                Por favor, ingresa tu nombre completo.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput3" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="exampleFormControlInput3" placeholder="Teléfono" required>
+                            <div class="invalid-feedback">
+                                Por favor, ingresa un número de teléfono válido.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput4" class="form-label">Dirección</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput4" placeholder="Dirección" required>
+                            <div class="invalid-feedback">
+                                Por favor, ingresa tu dirección.
+                            </div>
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // 
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+         // Función de negocio 1: Mostrar mensaje de bienvenida al registrar
+         function showWelcomeMessage() {
+            alert('¡Gracias por registrarte! Pronto recibirás noticias nuestras.');
+        }
+
+        // Validación de formulario GMAIL
+        (function() {
+            'use strict';
+            var form = document.getElementById('subscriptionForm');
+            form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+                if (form.checkValidity() === true) {
+                    showWelcomeMessage();
+                }
+            }, false);
+        })();
+
+        $(document).ready(function() {
+    $("#togglePassword").click(function() {
+        var passwordField = $("#exampleFormControlInputPassword");
+        var type = passwordField.attr("type") === "password" ? "text" : "password";
+        passwordField.attr("type", type);
+        $(this).text(type === "password" ? "Mostrar Contraseña" : "Ocultar Contraseña");
+    });
+});
+
+
+        
+    </script>
+</body>
+</html>
