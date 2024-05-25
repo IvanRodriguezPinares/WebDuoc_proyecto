@@ -1,5 +1,5 @@
 /* Cambia el color del texto a blanco */
-h1,h2, h5, p, .navbar-brand, .nav-link, .btn {
+h1, h2, h5, p, .navbar-brand, .nav-link, .btn {
     color: #ffffff;
 }
 
@@ -8,13 +8,13 @@ h1,h2, h5, p, .navbar-brand, .nav-link, .btn {
 }
 
 /* Cambia el color del texto de card */
-.card-title,.card-text{
+.card-title, .card-text {
     color: #ffffff;
 }
 
 /* Estilos para el botón de registro */
 .btn-custom {
-    background-color: #ffffff; /* blanco*/
+    background-color: #ffffff; /* blanco */
     border-color: #0423a0; /* azul */
 }
 
@@ -23,7 +23,7 @@ h1,h2, h5, p, .navbar-brand, .nav-link, .btn {
     background-color: #005b96; /* Azul */
 }
 
-.navbar navbar-expand-lg navbar-dark bg-dark {
+.navbar-expand-lg, .navbar-dark, .bg-dark {
     background-color: #003678; /* Azul Oscuro */
 }
 
@@ -47,23 +47,24 @@ h1,h2, h5, p, .navbar-brand, .nav-link, .btn {
     height: 350px; /* Alto deseado */
 }
 
-
-h1,h2 {
+h1, h2 {
     text-align: center; /* Centra el título */
 }
 
 p {
     text-align: center; /* Centra los párrafos */
 }
+
 li {
-    color:#ffffff;
+    color: #ffffff;
 }
 
 /*para jquery */
 
 body {
-    overflow: hidden;
+    overflow: auto; /* Permitir scroll */
 }
+
 .bubble {
     background-color: rgba(0, 150, 255, 0.2); /* Aumentamos la transparencia */
     border-radius: 50%;

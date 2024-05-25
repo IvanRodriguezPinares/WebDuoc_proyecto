@@ -145,3 +145,15 @@ $(document).ready(function(){
 
     changeBackground();
 });
+
+/* API */
+$(document).ready(function() {
+    $.getJSON('https://mindicador.cl/api', function(data) {
+        var dailyIndicators = data;
+        $("#valorDolarBtn").text('Valor del dólar: $' + dailyIndicators.dolar.valor);
+    }).fail(function() {
+        console.log('Error al consumir la API!');
+    });
+  });
+
+  
