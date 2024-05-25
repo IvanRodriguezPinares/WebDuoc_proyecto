@@ -92,3 +92,56 @@ document.addEventListener("DOMContentLoaded", function() {
         }, index * 200); // Delay link animacion
     });
 });
+
+
+//funcion fondo
+$(document).ready(function(){
+    for (let i = 0; i < 20; i++) {
+        let size = Math.random() * 50 + 10; // Tamaño entre 10px y 60px
+        let bubble = $('<div class="bubble"></div>').css({
+            width: size,
+            height: size
+        });
+        $('body').append(bubble);
+        animateBubble(bubble);
+    }
+
+    function animateBubble(bubble) {
+        let duration = Math.random() * 5000 + 3000; // Duración entre 3000ms y 8000ms
+        bubble.css({
+            left: Math.random() * $(window).width(),
+            top: Math.random() * $(window).height()
+        });
+        bubble.animate({
+            top: Math.random() * $(window).height(),
+            left: Math.random() * $(window).width()
+        }, duration, function(){
+            animateBubble(bubble);
+        });
+    }
+});
+
+//fondo 2
+$(document).ready(function(){
+    let colors = [
+        "#003366", // Azul Oscuro
+        "#002147", // Azul Marino
+        "#191970", // Azul Medianoche
+        "#4682B4", // Azul Acero
+        "#4169E1", // Azul Real
+        "#00BFFF", // Azul Celeste
+        "#00FFFF", // Cian
+        "#00CED1", // Turquesa Oscuro
+        "#7FFFD4", // Aguamarina
+        "#ADD8E6"  // Azul Claro
+    ];
+    let index = 0;
+
+    function changeBackground() {
+        $("body").css("background-color", colors[index]);
+        index = (index + 1) % colors.length;
+        setTimeout(changeBackground, 3000);
+    }
+
+    changeBackground();
+});

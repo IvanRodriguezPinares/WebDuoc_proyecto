@@ -58,3 +58,18 @@ li {
     color:#ffffff;
 }
 
+/*para jquery */
+
+body {
+    overflow: hidden;
+}
+.bubble {
+    background-color: rgba(0, 150, 255, 0.2); /* Aumentamos la transparencia */
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* fondo dinamico */
+body {
+    transition: background-color 1s;
+}
