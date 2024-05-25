@@ -75,3 +75,16 @@ body {
 body {
     transition: background-color 1s;
 }
+
+#map {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+.leaflet-popup-content-wrapper {
+    background: black;
+    color: white;
+}
+.leaflet-popup-tip {
+    background: black;
+}

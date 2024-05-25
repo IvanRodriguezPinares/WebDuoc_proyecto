@@ -147,13 +147,18 @@ $(document).ready(function(){
 });
 
 /* API */
-$(document).ready(function() {
-    $.getJSON('https://mindicador.cl/api', function(data) {
-        var dailyIndicators = data;
-        $("#valorDolarBtn").text('Valor del dólar: $' + dailyIndicators.dolar.valor);
-    }).fail(function() {
-        console.log('Error al consumir la API!');
-    });
-  });
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var map = L.map('map').setView([-33.3704419, -70.6141635], 15);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([-33.3704419, -70.6141635]).addTo(map)
+        .bindPopup('Estamos ubicados en Huechuraba!')
+        .openPopup();
+});
 
   
